@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/black"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        tools:context=".view.activity.MoviesListActivity">
+    <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/nav_bar"
+            android:elevation="5dp"
+            android:id="@+id/toolbar">
+        <ImageView android:layout_width="24dp"
+                   android:layout_height="24dp"
+                   android:id="@+id/imgBack"
+                   android:src="@drawable/ic_back"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/pageTitle"
+                  android:textSize="21sp"
+                  android:layout_marginLeft="40dp"
+                  android:text="Romantic"
+                  android:textColor="@color/white"/>
+        <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                   android:src="@drawable/ic_search"
+                   android:layout_gravity="right"
+                   android:id="@+id/imgSearch"
+                   android:layout_marginRight="10dp"/>
+        <com.app.movies.moviesapp.view.customview.SearchEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:layout_marginRight="10dp"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:hint="@string/search_hint"
+                android:id="@+id/inputSearch"/>
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            android:id="@+id/moviesList"
+    />
+
+
+    <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:textSize="17sp"
+              android:visibility="gone"
+              android:textColor="@color/white"
+              app:layout_constraintTop_toBottomOf="@id/toolbar"
+              app:layout_constraintBottom_toBottomOf="parent"
+              android:id="@+id/txtNoResult"
+              android:text="@string/no_result"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

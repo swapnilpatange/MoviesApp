@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MoviesApp</string>
+    <string name="image_physical_path">http://swapnilpatange-001-site1.etempurl.com/appimages/</string>
+    <string name="search_hint">Search Romantic Comedy</string>
+    <string name="no_result">No Result Found</string>
+    <string name="no_internet">No Internet Connection</string>
+</resources>
